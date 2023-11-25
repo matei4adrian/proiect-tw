@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = ({ children }) => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -39,13 +39,13 @@ const Navbar = ({ children }) => {
           >
             <ul>
               <li className="md:inline-block cursor-pointer hover:text-gray-800 border-b md:border-none py-2 px-3">
-                <a href="/">Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li className="dropdown md:inline-block cursor-pointer hover:text-gray-800 border-b md:border-none py-2 px-3 relative">
-                <a href="/my-experiences">My experiences</a>
+                <Link to="/my-experiences">My experiences</Link>
               </li>
               <li className="dropdown md:inline-block cursor-pointer hover:text-gray-800 border-b md:border-none py-2 px-3 relative">
-                <a href="/profile">Profile</a>
+                <Link to="/profile">Profile</Link>
               </li>
               <li className="md:inline-block cursor-pointer text-red-500 hover:text-red-700 border-b md:border-none py-2 px-3">
                 <button onClick={handleClickLogout}>Logout</button>

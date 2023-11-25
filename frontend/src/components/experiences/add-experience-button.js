@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const AddExperienceButton = (props) => {
   const { isMyExperiencePage } = props;
 
@@ -7,10 +9,9 @@ const AddExperienceButton = (props) => {
         isMyExperiencePage ? "flex justify-end invisible" : "flex justify-end"
       }
     >
-      <a
-        role="button"
+      <Link
         className="bg-purple-600 flex justify-center items-center text-center hover:bg-purple-700 text-white text-sm px-4 py-2 border rounded-full"
-        href="./add-experience"
+        to="/add-experience"
       >
         <svg
           className="h-4 w-4 text-white mr-2"
@@ -26,7 +27,7 @@ const AddExperienceButton = (props) => {
           />
         </svg>
         Add an experience
-      </a>
+      </Link>
     </div>
   );
 };
